@@ -1,5 +1,5 @@
-<div class="backdrop is-hidden" data-second-modal>
-  <div class="modal reviews__modal">
+<div class="backdrop is-hidden" data-second-modal id="reviews__backdrop">
+  <div class="modal reviews__modal" id="reviews__modal">
     <button
       type="button"
       class="modal-close-btn"
@@ -16,11 +16,12 @@
         about <span class="section__title-span">our chocolate</span>
       </span>
     </h2>
-    <form class="reviews__form" autocomplete="off">
+    <form class="reviews__form" autocomplete="off" id="reviews__form">
       <div class="reviews__form-field">
         <input
+          id="reviews__name"
           class="form-input"
-          name="review-user-name"
+          name="reviews__name"
           type="text"
           placeholder="Name"
           required
@@ -28,8 +29,9 @@
       </div>
       <div class="reviews__form-field">
         <input
+          id="reviews__email"
           class="form-input"
-          name="review-user-email"
+          name="reviews__email"
           type="email"
           placeholder="Enter your email"
           required
@@ -39,8 +41,9 @@
         <label>
           <span class="country-code">
             <input
+              id="reviews__phone"
               class="form-input user-phone-input"
-              name="review-user-phone"
+              name="reviews__phone"
               type="tel"
               maxlength="9"
               minlength="9"
@@ -54,17 +57,21 @@
         </label>
       </div>
       <div class="reviews__form-field">
-        <textarea
+        <textarea 
+          id="reviews__comment"
           class="form-textarea review-form-textarea"
-          name="review-user-comment"
+          name="reviews__comment"
           placeholder="Enter text"
+          required
         ></textarea>
       </div>
 
       <button
+        id="reviews__modal-button"
         class="modal-button accent-button reviews__form-submit"
         type="submit"
-      >
+
+        >
         Send
       </button>
     </form>

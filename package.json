@@ -20,6 +20,8 @@
     "vite-plugin-zip-pack": "^1.0.6"
   },
   "dependencies": {
+    "@mantine/form": "^7.3.1",
+    "@mantine/notifications": "^7.3.1",
     "global": "^4.4.0",
     "imask": "^6.4.3",
     "swiper": "^8.4.5"

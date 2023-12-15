@@ -7,6 +7,7 @@ document.addEventListener(
       'data-third-modal',
       'data-fourth-modal',
       'data-fifth-modal',
+      'data-sixth-modal',
     ];
 
     modals.forEach(element => {

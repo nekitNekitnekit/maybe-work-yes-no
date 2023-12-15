@@ -5,3 +5,6 @@ import './scripts/videoplayer';
 import './scripts/form';
 import './scripts/scroll-to-top';
 import './scripts/reviews-swiper';
+import './scripts/buy-modal';
+import './scripts/reviews-modal';
+import './scripts/subscribe-modal';

@@ -1,5 +1,5 @@
-<div class="backdrop is-hidden" data-first-modal>
-  <div class="modal buy__modal">
+<div class="backdrop is-hidden" data-first-modal id="buy__backdrop">
+  <div class="modal buy__modal" id="buy__modal">
     <button
       type="button"
       class="modal-close-btn"
@@ -13,13 +13,15 @@
     <h2 class="modal__window-title buy__modal-title">
       Buy <span class="section__title-span">now</span>
     </h2>
-    <form class="buy__form" autocomplete="off">
+    <form class="buy__form" autocomplete="off" id="buy__form">
       <div class="buy__form-chocolate-weight-container">
         <label class="buy__form-chocolate-weight-wrapper">
           <input
             type="radio"
-            name="weight"
+            name="order__weight"
+            id="order__weight"
             class="buy__form-radio"
+            value="100"
             checked
           />
           <span class="chocolate__weight-container">
@@ -36,7 +38,7 @@
           </span>
         </label>
         <label class="buy__form-chocolate-weight-wrapper">
-          <input type="radio" name="weight" class="buy__form-radio" />
+          <input type="radio" name="order__weight" id="order__weight" class="buy__form-radio" value="200" />
           <span class="chocolate__weight-container">
             <img
               loading="lazy"
@@ -51,7 +53,7 @@
           </span>
         </label>
         <label class="buy__form-chocolate-weight-wrapper">
-          <input type="radio" name="weight" class="buy__form-radio" />
+          <input type="radio" name="order__weight" id="order__weight" class="buy__form-radio" value="300" />
           <span class="chocolate__weight-container">
             <img
               loading="lazy"
@@ -74,16 +76,17 @@
         <div class="personal-info-input">
           <input
             class="form-input user-name"
-            id="order-user-name"
+            id="order__name"
             type="text"
-            name="order-user-name"
+            name="order__name"
             pattern="[a-zA-zа-яА-ЯіІїЇєЄ']+"
             placeholder="Name"
             required
           />
           <input
             class="form-input user-surname"
-            name="order-user-surname"
+            id="order__surname"
+            name="order__surname"
             type="text"
             pattern="[a-zA-zа-яА-ЯіІїЇєЄ']+"
             placeholder="Surname"
@@ -96,8 +99,8 @@
         <label class="form-label" for="order-user-email"> Email </label>
         <input
           class="form-input user-email"
-          id="order-user-email"
-          name="order-user-email"
+          id="order__email"
+          name="order__email"
           type="email"
           placeholder="Enter your email"
           required
@@ -109,8 +112,9 @@
           <span class="country-code">
             <input
               class="form-input user-phone-input"
+              id="order__phone"
               type="tel"
-              name="order-user-phone"
+              name="order__phone"
               maxlength="9"
               minlength="9"
               placeholder="Phone number"
@@ -128,8 +132,8 @@
         <span class="user-card-wrapper">
           <input
             class="form-input user-card"
-            id="order-user-card"
-            name="order-user-card"
+            id="order__card"
+            name="order__card"
             type="tel"
             maxlength="16"
             minlength="16"
@@ -146,15 +150,17 @@
         <label class="form-label" for="order-user-comment">Comment</label>
         <textarea
           class="form-textarea"
-          id="order-user-comment"
-          name="order-user-comment"
+          id="order__comment"
+          name="order__comment"
           placeholder="Enter text"
         ></textarea>
       </div>
 
       <button
+        id="buy__modal-button"
         type="submit"
         class="modal-button accent-button buy__form-submit"
+
       >
         Submit
       </button>
